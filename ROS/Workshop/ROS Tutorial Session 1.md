@@ -29,7 +29,7 @@ You have a camera node that **publishes** to an image_data **topic**, which is *
 
    ```bash
    $ cd ~
-   $ git clone https://github.com/sutd-robotics/ros-tutorials -b noetic
+   $ git clone https://github.com/sutd-robotics/ros-tutorials/tree/noetic
    ```
 
 2. source your ROS workspace with the following command
