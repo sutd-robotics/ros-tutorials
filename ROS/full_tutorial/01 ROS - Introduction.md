@@ -2,9 +2,9 @@
 
 # ROS Crash Course
 
-Author: methylDragon  
-Fairly comprehensive ROS crash course!  
-I'll be adapting it from the ROS Tutorials: http://wiki.ros.org/ROS/Tutorials    
+Author: methylDragon, Kevinskwk
+Fairly comprehensive ROS crash course!
+I'll be adapting it from the ROS Tutorials: http://wiki.ros.org/ROS/Tutorials
 and ETHz: http://www.rsl.ethz.ch/education-students/lectures/ros.html
 
 ------
@@ -41,11 +41,11 @@ and ETHz: http://www.rsl.ethz.ch/education-students/lectures/ros.html
 
 ## 1. Introduction <a name="1"></a>
 
-ROS stands for Robot Operating System. And true to its name, it's for working with robots!
+ROS stands for **Robot Operating System**. And true to its name, it's for working with robots!
 
 ROS:
 
-- Is a **publisher-subscriber framework** (pub-sub) for running independent programs on robots (across different system architectures)
+- Is a **publisher-subscriber framework** (pub-sub) for running independent programs on robots
 - Has a **rich ecosystem of open-source packages and tools** written by its active community
 - Is one of the **go-to frameworks for robotics research and prototyping!**
 
@@ -65,15 +65,13 @@ You have enough in the ecosystem to create a fairly robust autonomous system, an
 
 [go to top](#top)
 
-For this crash course, I'll be assuming that we'll be using ROS Kinetic for Ubuntu 16.04. Make sure you install the correct version of Ubuntu, otherwise it might be troublesome to install ROS (since it's officially supported on only specific distributions!)
-
-You may choose to install a more recent distribution though!
+For this crash course, I'll be assuming that we'll be using ROS Noetic for Ubuntu 20.04. Make sure you install the correct version of Ubuntu, otherwise it might be troublesome to install ROS (since it's officially supported on only specific distributions!)
 
 Make sure you **read** the tutorials! Don't just blindly copy terminal commands!
 
-Dualbooting Ubuntu 16.04: https://www.tecmint.com/install-ubuntu-16-04-alongside-with-windows-10-or-8-in-dual-boot/
+Dualbooting Ubuntu 20.04 with Windows: https://fossbytes.com/install-ubuntu-20-04-with-windows-10-dual-boot/
 
-Installing ROS: http://wiki.ros.org/kinetic/Installation/Ubuntu
+Installing ROS: http://wiki.ros.org/noetic/Installation/Ubuntu
 
 
 
@@ -99,7 +97,7 @@ The ROS communication graph is made of ROS nodes (which can run robotics applica
 - **Subscribers** subscribe to **topics**, and receive **messages** as they are published
 - All this activity is facilitated by the **ROS Master** (in the analogy, treat it as the forum site itself that hosts the nodes and topics, and mediates the messages!)
 
-![1.1](./assets/1.1.png)
+![1.1](../assets/1.1.png)
 
 (Image source: clearpathrobotics.com)
 
@@ -107,7 +105,7 @@ So for a practical example. Consider a simple image processing system implemente
 
 You have a camera node that **publishes** to an image_data **topic**, which is **subscribed** to by an image processing node and image display node.
 
-![1.2](./assets/1.2.png)
+![1.2](../assets/1.2.png)
 
 (Image source: clearpathrobotics.com)
 
@@ -139,7 +137,7 @@ $ catkin_make
 > Please go ahead and install the tutorials package!
 >
 > ```bash
-> # Replace <distro> with your ROS distribution (it should be kinetic)
+> # Replace <distro> with your ROS distribution (it should be noetic)
 > $ sudo apt-get install ros-<distro>-ros-tutorials
 > ```
 >
@@ -174,7 +172,7 @@ ROS comes with a whole bunch of command line tools that let you mess around with
 The ROS installation tutorial should have already gotten you set up with sourcing the base workspace for ROS.
 
 ```shell
-$ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+$ echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 $ source ~/.bashrc
 ```
 

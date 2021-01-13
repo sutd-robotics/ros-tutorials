@@ -2,14 +2,14 @@
 
 Author: methylDragon  
 Fairly comprehensive ROS crash course!  
-I'll be adapting it from the ROS Tutorials:http://wiki.ros.org/ROS/Tutorials    
+I'll be adapting it from the ROS Tutorials: http://wiki.ros.org/ROS/Tutorials    
 and ETHz http://www.rsl.ethz.ch/education-students/lectures/ros.html    
 
 ------
 
 ## Pre-Requisites
 
-- A system with Ubuntu 16.04 installed (no other versions!)
+- A system with Ubuntu and ROS installed
 - Linux
 - Python 3 and/or C++
 
@@ -95,7 +95,7 @@ Packages can contain:
 
 - **Separate message definition packages from other packages**, because including messages in your executable packages tends to break stuff.
 
-  ![2.1](./assets/2.1.png)
+  ![2.1](../assets/2.1.png)
 
 
 
@@ -1396,6 +1396,8 @@ It's pretty simple to make one too! It's just Python.
 
 ![Screenshot-Reconfigure.png](assets/Screenshot-Reconfigure.png)
 
+For the image above, the parameters are stored in `/dynamic_tutorials`. That's because that's the name of the node that spawned the server! It's not defined by the cfg file per se.
+
 [Source](<http://wiki.ros.org/dynamic_reconfigure/Tutorials/HowToWriteYourFirstCfgFile>)
 
 ```python
@@ -1436,8 +1438,8 @@ Let's break down the parameter generator function arguments.
 |        2        | level       | One way to group parameters as you like. Bits of all parameter levels that have changed will be `OR`ed together for the service callback. |
 |        3        | description | Description of the parameter                                 |
 |        4        | default     | Default value of the parameter                               |
-|        5        | min         | Minimum value                                                |
-|        6        | max         | Maximum value                                                |
+|        5        | min         | Minimum value (Not setting this sets min to -inf)            |
+|        6        | max         | Maximum value (Not setting this sets max to inf)             |
 
 #### **Generate Call**
 

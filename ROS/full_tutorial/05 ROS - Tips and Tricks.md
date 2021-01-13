@@ -7,7 +7,7 @@ Just a collection of useful things I've found
 
 ## Pre-Requisites
 
-- A system with Ubuntu 16.04 installed (no other versions!)
+- A system with Ubuntu 20.04 installed (no other versions!)
 - Linux
 - Python 3 and/or C++
 

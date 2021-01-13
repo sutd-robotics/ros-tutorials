@@ -9,7 +9,7 @@ and ETHz http://www.rsl.ethz.ch/education-students/lectures/ros.html
 
 ## Pre-Requisites
 
-- A system with Ubuntu 16.04 installed (no other versions!)
+- A system with Ubuntu 20.04 installed (no other versions!)
 - Linux
 - C++
   - You should at least know classes and pointers
