@@ -17,7 +17,7 @@ class ClassPub():
         # Create message object
         self.msg = String()
 
-    	while not rospy.is_shutdown():
+        while not rospy.is_shutdown():
             hello_str = "Hello world! %s" % rospy.get_time()
             self.msg.data = hello_str
 

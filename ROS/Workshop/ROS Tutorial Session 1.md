@@ -99,7 +99,7 @@ You have a camera node that **publishes** to an image_data **topic**, which is *
 
    ```shell
    $ cd ~/ROS_examples
-   $ source /devel/setup.bash
+   $ source devel/setup.bash
    ```
 
 4. (Optional) Give all scripts inside the workspace execute authority. Sometimes this is not a given
@@ -117,7 +117,7 @@ You have a camera node that **publishes** to an image_data **topic**, which is *
 Running the ROS hello world. It just screams Hello World in the console.
 
 ```bash
-$ rosrun basic_pusub hello_world 
+$ rosrun basic_pub_sub hello_world 
 ```
 
 This launches one node called `logger`:
@@ -217,7 +217,7 @@ Full launch file:
 Class based implementation of a publisher! Also has a callback for when it receives messages on the same topic.
 
 ```shell
-$ rosrun classub class_pub_sub 
+$ rosrun class_pub_sub class_pub_sub 
 ```
 
 If you open `rqt_graph`, you will notice something quite interesting. The node is publishing it to itself! This is because it is both a publisher and subscriber.
