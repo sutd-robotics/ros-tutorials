@@ -17,7 +17,7 @@ def add_two_ints_client(x, y):
         resp1 = add_two_ints(x, y)
         return resp1.Sum
 
-    except rospy.ServiceException, e:
+    except rospy.ServiceException(e):
         print("Service call failed: %s" %  e)
 
 # Invalid call reminder
