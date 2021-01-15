@@ -1,6 +1,6 @@
 # ROS Tutorial Session 2
 
-## Recap from last week
+## Recap from yesterday
 
 - ROS uses a publisher-subscriber system
   - If any component of the system fails, the rest of the system can work (unless it's the ROS master)
