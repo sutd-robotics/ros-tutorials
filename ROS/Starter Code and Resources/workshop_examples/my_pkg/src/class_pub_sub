@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import rospy
+from msg_example_msgs.msg import My_msg
+
+class ClassPub():
+    def __init__(self):
+        # Init ROS
+        self.pub = rospy.Publisher("chatter", My_msg, queue_size=10)
+        self.sub = rospy.Subscriber("chatter", My_msg, self.msg_cb, queue_size=1)
+        self.rate = rospy.Rate(10)
+
+        rospy.set_param('/info_param', 'SOAR')
+
+        # Sleep to give time for publisher to bind
+        rospy.sleep(1)
+
+        # Create message object
+        self.msg = My_msg()
+        while not rospy.is_shutdown():
+            self.msg.header.stamp = rospy.Time.now()
+            self.msg.name = str(rospy.get_param('/info_param'))
+            self.msg.rating = 255
+
+            self.pub.publish(self.msg)
+            self.rate.sleep()
+
+    def msg_cb(self, msg):
+        rospy.loginfo(msg)
+
+if __name__ == '__main__':
+    rospy.init_node('class_pub')
+    class_pub = ClassPub()
+
+    try:
+        rospy.spin()
+    except KeyboardInterrupt:
+        print("SHUTTING DOWN CLASS PUBLISHER")
+
